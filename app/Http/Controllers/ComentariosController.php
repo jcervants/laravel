@@ -1,32 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\ComentarioFormRequest;
 use Illuminate\Http\Request;
+use App\Comentario;
 
-class PagesController extends Controller
+class ComentariosController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-      function home()
+    public function nuevoComentario(ComentarioFormRequest $request)
     {
-        return view('welcome');
+        $comentario = new Comentario(array(
+            'post_id' => $request->get('post_id'),
+            'contenido' => $request->get('contenido')
+        ));
+
+        $comentario->save();
+        return redirect()->back()->with('status','Tu comentario ha sido creado!');
     }
-
-    public function about()
-    {
-        return view('about');
-    }
-
-    public function contact()
-    {
-
-    }
-
+    
     public function index()
     {
         //
