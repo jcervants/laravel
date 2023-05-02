@@ -21,6 +21,14 @@
             <div class="clearfix"></div>
         </div>
     </div>
+    @foreach($comentarios as $comentario)
+        <div class="card mt-3">
+            <div class="card-body">
+                {{$comentario->contenido}}
+            </div>
+        </div>
+    @endforeach
+
     <div class="card mt-3">
         <form method="post" action="/comentario">
             @foreach($errors->all() as $error)
