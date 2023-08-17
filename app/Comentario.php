@@ -9,6 +9,6 @@ class Comentario extends Model
     protected $guarded = ['id'];
     
     public function ticket(){
-        $this->belongsTo('App\Comentario');
+        $this->belongsTo('App\Ticket');
     }
 }

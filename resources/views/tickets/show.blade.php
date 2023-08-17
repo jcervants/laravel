@@ -9,15 +9,13 @@
             <div class="clearfix"></div>    
         </div>
         <div class="card-body">
-            <p><strong>Estado:</strong>{{$ticket->status ? 'Pendiente': 'Atendido'}}</p>
+            <p><strong>Estado: </strong>{{$ticket->status ? 'Pendiente': 'Atendido'}}</p>
             <p>{{$ticket->content}}</p>
-            <a href="{{ action('TicketsController@edit', $ticket->slug)}}" class="btn btn-info">Editar</a>
-            <form method="post" action="{{ action('TicketsController@destroy', $ticket->slug)}}">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div>
-                    <button type="submit" class="btn btn-warning">Eliminar</button>
-                </div>
-            </form>
+            <button type="submit" class="btn btn-warning">Eliminar</button>
+                <a href="{{ action('TicketsController@edit', $ticket->slug)}}" class="btn btn-info">Editar</a>
+                <form method="post" action="{{ action('TicketsController@destroy', $ticket->slug)}}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                </form>
             <div class="clearfix"></div>
         </div>
     </div>
@@ -39,8 +37,8 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <input type="text" name="_token" value="{{csrf_token()}}">
-            <input type="text" name="post_id" value="{{$ticket->id}}">
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
+            <input type="hidden" name="post_id" value="{{$ticket->id}}">
             <fieldset>
                 <legend class="ml-3">Comentar</legend>
                 <div class="form-group">

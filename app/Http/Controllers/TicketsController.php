@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;    
 use App\Http\Requests\TicketFormRequest;
 use App\Ticket;
+use App\Comentario;
 
 
 
@@ -21,18 +22,19 @@ class TicketsController extends Controller
     {
         return view('tickets\create');
     }
-
+    
     public function store(TicketFormRequest $request)
     {   
        $slug = uniqid();
        $ticket = new Ticket(array(
             'title' => $request->get('title'),
             'content' => $request->get('content'),
+            'precio' => $request->get('precio'),
             'slug' => $slug
        ));
        
        $ticket->save();
-       return redirect('/contacto')->with('status', 'Your ticket has been created! Its unique id is: '.$slug);
+       return redirect('/tickets')->with('status', 'Your ticket has been created! Its unique id is: '.$slug);
 
     }
 
@@ -43,35 +45,12 @@ class TicketsController extends Controller
         return view('tickets.index', compact('tickets'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+      public function show($slug)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($slug)
-    {
-        $ticket = Ticket::whereSlug($slug)->first();
-       
-       return $ticket;
-       //return ($comentarios);
-       //   return view('tickets.show', compact('ticket','comentarios'));
+        $ticket = Ticket::whereSlug($slug)->firstOrFail();
+        //Amazing power eloquent
+        $comentarios = $ticket->comentarios()->get();
+        return view('tickets.show', compact('ticket','comentarios'));
     }   
 
     /**

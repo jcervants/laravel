@@ -20,7 +20,7 @@ class ComentariosController extends Controller
         ));
 
         $comentario->save();
-        return redirect()->back()->with('status','Tu comentario ha sido creado!');
+        return redirect()->back()->with('status','Tu comentario ha sido creado! ');
     }
     
     public function index()

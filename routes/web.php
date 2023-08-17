@@ -17,8 +17,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-
+Route::get('/acerca', function () {
+    return view('about');
+});
+ 
 Route::get('/contacto', TicketsController::class.'@'.'contact'); 
+
+
 Route::post('/contacto', TicketsController::class.'@'.'store'); 
 
 Route::get('/tickets', TicketsController::class.'@'.'index'); 
