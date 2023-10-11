@@ -1,5 +1,8 @@
 @extends('master')
 @section('title', 'Inicio')
+{{-- せんせいです。
+[sensei desu]
+She's a teacher. / He's a teacher. --}}
 
 @section('content')
 <div class="container"> 
@@ -42,7 +45,7 @@
                                 <h5 class="item-title mbr-fonts-style display-5"><strong>Páginas Web</strong></h5>
                                 
                                 <p class="mbr-text mbr-fonts-style display-7">
-                                    Desarrollo a medida, enfocados en la marca de la empresa.
+                                    Desarrollo a medida, enfocados en las fortalezas de la empresas.
                                 </p>
                                 <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-white display-7">Más información</a></div>
                             </div>
@@ -57,7 +60,7 @@
                                 <h5 class="item-title mbr-fonts-style display-5"><strong>Sistema de Inventario y Ventas</strong></h5>
                                 
                                 <p class="mbr-text mbr-fonts-style display-7">
-                                    Gestiona tu empresa optimizando tus procesos.
+                                    Asesoramiento para gestionar tu empresa optimizando tus procesos.
                                 </p>
                                 <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-white display-7">Learn More</a></div>
                             </div>

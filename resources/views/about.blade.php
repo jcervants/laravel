@@ -8,7 +8,7 @@
 				<div class="text-wrapper align-left">
 					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2"><strong>Acerca </strong></h1>
 					<p class="mbr-text mbr-fonts-style mb-4 display-7">
-						Empresa Peruana especializada en soluciones integradores en áreas de electricidad, hidráulica, mecánica e informática con estándares de calidad.
+						Empresa Peruana especializada en desarrollo de software y consultaría de sistemas identificado las necesidades de las empresas bajo estándares de calidad.
 					</p>
 					<div class="mbr-section-btn mt-3"><a class="btn btn-primary display-7" href="https://mobiri.se">Start now</a></div>
 				</div>

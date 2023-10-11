@@ -5,7 +5,7 @@
 <div class="container col-md-6 col-md-offset-2 mt-5">
     <div class="card">
         <div class="card-header ">
-            <h5 class="float-left">Tickets</h5>
+            <h5 class="float-left">Listado de Tickets</h5>
                 <div class="clearfix"></div>
         </div>
         @if(session('status'))
@@ -29,7 +29,7 @@
                     @foreach($tickets as $ticket)
                         <tr>
                             <td>{{$ticket->id}}</td>    
-                            <td><a href="{{action('TicketsController@show', $ticket->slug)}}">{{$ticket->title}}</a></td>    
+                              <td><a href="{{action('TicketsController@show', $ticket->slug)}}">{{$ticket->title}}</a></td>    
                             <td>{{$ticket->status ? 'Pendiente':'Respondido'}}</td>    
                         </tr>  
                     @endforeach  

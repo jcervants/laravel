@@ -27,14 +27,15 @@ class TicketsController extends Controller
     {   
        $slug = uniqid();
        $ticket = new Ticket(array(
-            'title' => $request->get('title'),
-            'content' => $request->get('content'),
+            'title' => $request->get('titulo'),
+            'content' => $request->get('contenido'),
+            'solucion' => $request->get('solucion'),
             'precio' => $request->get('precio'),
             'slug' => $slug
        ));
-       
+
        $ticket->save();
-       return redirect('/tickets')->with('status', 'Your ticket has been created! Its unique id is: '.$slug);
+       return redirect('/tickets')->with('status', 'Tu ticket ha sido creado! Su identificador es: '.$slug);
 
     }
 
