@@ -14,16 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('layout');
 });
 
 Route::get('/acerca', function () {
     return view('about');
 });
- 
+
+Route::get('/almacen/categoria', CategoriaController::class.'@'.'index'); 
+Route::get('/almacen/categoria', CategoriaController::class.'@'.'index'); 
+
 Route::get('/contacto', TicketsController::class.'@'.'contact'); 
-
-
 Route::post('/contacto', TicketsController::class.'@'.'store'); 
 
 Route::get('/tickets', TicketsController::class.'@'.'index'); 

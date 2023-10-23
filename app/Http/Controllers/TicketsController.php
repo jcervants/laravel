@@ -1,13 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;    
 use App\Http\Requests\TicketFormRequest;
 use App\Ticket;
 use App\Comentario;
-
-
 
 class TicketsController extends Controller
 {
@@ -16,8 +13,6 @@ class TicketsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function contact()
     {
         return view('tickets\create');
@@ -89,12 +84,6 @@ class TicketsController extends Controller
         return redirect(action('TicketsController@edit', $ticket->slug))->with('status','El ticket'.$slug.' ha sido actualizado.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($slug)
     {
         $ticket = Ticket::whereSlug($slug)->first();

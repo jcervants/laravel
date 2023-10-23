@@ -3,10 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\HasFactory;
 
 class Categoria extends Model
 {
-    use HasFactory;
     protected $table = 'categoria';
     protected $primaryKey = 'id_categoria';
 
