@@ -1,5 +1,6 @@
 @extends('master')
-@section('title', 'View a ticket')
+@section('title', 'Ticket')
+
 @section('content')
 
 <div class="container col-md-6 col-md-offset-2 mt-5">
@@ -56,5 +57,6 @@
         </form>
     </div>
 </div>
+
 @endsection
 
