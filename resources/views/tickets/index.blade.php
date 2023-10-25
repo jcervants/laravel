@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'Visualizar todos los tickets')
+@section('title', 'Tickets')
 @section('content')
 
 <div class="container col-md-6 col-md-offset-2 mt-5">
@@ -38,6 +38,5 @@
         @endif
         </div>
     </div>
-
 </div>
 @endsection
