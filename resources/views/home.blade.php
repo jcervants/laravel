@@ -3,26 +3,16 @@
 {{-- せんせいです。
 [sensei desu]
 She's a teacher. / He's a teacher. --}}
-
 @section('content')
 <div class="container"> 
         <div class="row banner">
             <div class="col-md-12">
-                <h1 class="text-center mt-5 editContent">
-                   Soluciones y mejores a tus procesos de informáticos.
-                </h1>
-                <h3 class="text-center mt-2 editContent">Diseño de sistemas y páginas Web.</h3>
+                <h3 class="mbr-fonts-style align-left mb-3 display-3">
+                 Enfocados en brindar productos de calidad.
+                </h3>
+                <h3 class="mbr-fonts-style align-left mb-3 display-3">Asesoramiento y desarrollo de sistemas.</h3>
                 <div class="text-center">
                     <img src="{{ asset('images/ingenia-portada.png') }}" width="700" height="500" alt="Portada">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <h1 class="text-center mt-5 editContent">
-                    Sistema de Inventario Web
-                </h1>
-                <h3 class="text-center mt-2 editContent">Escala Profesionalmente tu Inventario y Ventas</h3>
-                <div class="text-center">
-                    <img src="https://learninglaravel.net/img/LearningLaravel5_cover7.png" width="302" height="391" alt="">
                 </div>
             </div>
         </div>
@@ -31,9 +21,9 @@ She's a teacher. / He's a teacher. --}}
 	        <div class="container">
                 <div class="mbr-section-head mb-5">
                     <h4 class="mbr-section-title mbr-fonts-style align-left mb-3 display-2">
-                        <strong>Nuestros Servicios</strong>
+                        Servicios
                     </h4>
-                    <h5 class="mbr-section-subtitle mbr-fonts-style align-left mb-3 display-7">Brindamos servicios en base a nuestra experiencia, calidad y especialización, con innovación.</h5>
+                    <h5 class="mbr-section-subtitle mbr-fonts-style align-left mb-3 display-7">Calidad y especialización, con innovación.</h5>
                 </div>
            <div class="row">
                 <div class="item features-image col-12 col-md-6 col-lg-4">
@@ -77,7 +67,7 @@ She's a teacher. / He's a teacher. --}}
                                     <p class="mbr-text mbr-fonts-style display-7">
                                         Potenciación de computadoras y laptops
                                     </p>
-                                    <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-white display-7">Más info.</a></div>
+                                    {{-- <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-white display-7">Más info.</a></div> --}}
                                 </div>
             
                             </div>
@@ -85,5 +75,7 @@ She's a teacher. / He's a teacher. --}}
                 </div>
             </div>
     </section>
+    @include('contact')
 @endsection
+
 
